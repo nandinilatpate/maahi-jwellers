@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maahi Jewellers | Parli Vaijnath</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fdfaf4;
+    color: #352516;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #fffaf0;
+
+    border-bottom: 1px solid #d6b56d;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 30px;
+}
+
+.logo {
+    color: #9b6814;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo small {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #6f5836;
+
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #4c3924;
+
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #a87520;
+}
+
+.nav-button {
+    background: #a87520;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 25px;
+
+    background:
+        radial-gradient(circle at top, #fff8e6, #f4ead5);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 80px;
+    left: 12%;
+
+    font-size: 70px;
+
+    color: #d2ad5d;
+
+    opacity: 0.3;
+}
+
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 70px;
+    right: 12%;
+
+    font-size: 90px;
+
+    color: #d2ad5d;
+
+    opacity: 0.25;
+}
+
+.hero-content {
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.established {
+    color: #a87520;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 68px;
+
+    color: #3a2817;
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #a87520;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+
+    color: #705c40;
+
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #75664f;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.gold-button {
+    background: #a87520;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    background: #805511;
+
+    transform: translateY(-2px);
+}
+
+.outline-button {
+    border: 1px solid #a87520;
+
+    color: #8c5d13;
+
+    padding: 15px 30px;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.outline-button:hover {
+    background: #a87520;
+
+    color: white;
+}
+
+
+/* =========================
+   SECTION COMMON
+========================= */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section {
+    padding: 90px 30px;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: auto auto 50px;
+}
+
+.section-label {
+    color: #a87520;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+
+    color: #392817;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #75664f;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   COLLECTIONS
+========================= */
+
+.collections {
+    background: white;
+}
+
+.collection-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.collection-card {
+    min-height: 250px;
+
+    border: 1px solid #e2cfaa;
+
+    background: #fffaf1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(80,55,20,0.12);
+}
+
+.collection-icon {
+    font-size: 58px;
+
+    margin-bottom: 18px;
+}
+
+.collection-card h3 {
+    color: #7d5312;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.collection-card p {
+    color: #75664f;
+
+    line-height: 1.5;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f4ead7;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 40px;
+}
+
+.about-section {
+    background: #f4ead7;
+}
+
+.about-decoration {
+    width: 45%;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.about-circle {
+    width: 330px;
+
+    height: 330px;
+
+    border-radius: 50%;
+
+    border: 1px solid #c39a4a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff8e8;
+
+    box-shadow:
+        inset 0 0 0 12px #f5ead1,
+        0 15px 40px rgba(80,55,20,0.1);
+}
+
+.about-circle span {
+    font-size: 100px;
+}
+
+.about-content {
+    width: 55%;
+}
+
+.about-content .section-label {
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 43px;
+
+    color: #392817;
+
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    color: #6f604b;
+
+    line-height: 1.8;
+
+    margin-bottom: 16px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    background: white;
+
+    padding: 80px 30px;
+}
+
+.feature-grid {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #664512;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.feature p {
+    color: #75664f;
+
+    line-height: 1.6;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ENQUIRY
+========================= */
+
+.enquiry {
+    background: #fffaf0;
+
+    padding: 90px 30px;
+}
+
+.enquiry-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    border: 1px solid #d8bd82;
+
+    padding: 55px;
+
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(70,50,20,0.08);
+}
+
+.enquiry-box h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.enquiry-box > p {
+    text-align: center;
+
+    color: #75664f;
+
+    margin-bottom: 35px;
+
+    font-family: Arial, sans-serif;
+}
+
+.form-row {
+    display: flex;
+
+    gap: 20px;
+}
+
+.input-group {
+    flex: 1;
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #594327;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d9c59f;
+
+    background: #fffdf8;
+
+    border-radius: 2px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #a87520;
+}
+
+.submit-button {
+    width: 100%;
+
+    border: none;
+
+    background: #a87520;
+
+    color: white;
+
+    padding: 16px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border-radius: 2px;
+}
+
+.submit-button:hover {
+    background: #805511;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #302316;
+
+    color: white;
+
+    padding: 85px 30px;
+
+    text-align: center;
+}
+
+.contact .section-label {
+    color: #d6ae5b;
+}
+
+.contact h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    color: #d3c7b2;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.contact-grid {
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    border: 1px solid #665338;
+
+    padding: 28px 20px;
+
+    background: #382a1c;
+}
+
+.contact-card .icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    color: #dfb966;
+
+    margin-bottom: 8px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: #d3c7b2;
+
+    line-height: 1.6;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #21180f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.footer-name {
+    color: #d9b260;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #a99c89;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.whatsapp,
+.call {
+    position: fixed;
+
+    right: 22px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 24px;
+
+    z-index: 999;
+}
+
+.whatsapp {
+    bottom: 88px;
+
+    background: #25d366;
+}
+
+.call {
+    bottom: 22px;
+
+    background: #a87520;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 10px 15px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+
+        padding: 70px 25px;
+    }
+
+    .about-decoration,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content .section-label {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 35px;
+
+        text-align: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .enquiry-box {
+        padding: 35px 22px;
+    }
+
+    .section-heading h2,
+    .contact h2 {
+        font-size: 34px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Maahi Jewellers
+
+<small>
+BY MAHESHWARI LATPATE
+</small>
+
+</div>
+
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#collections">Collections</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#enquiry">Enquiry</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+
+<a
+href="https://wa.me/917020743737"
+target="_blank"
+class="nav-button"
+>
+WhatsApp Us
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<p class="established">
+ELEGANCE • TRADITION • TRUST
+</p>
+
+<h1>
+Maahi <span>Jewellers</span>
+</h1>
+
+<p class="hero-subtitle">
+By Maheshwari Latpate
+</p>
+
+<p class="hero-text">
+
+Discover jewellery that celebrates
+your special moments. From traditional
+designs to timeless pieces, Maahi
+Jewellers brings elegance and style
+to every occasion.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="#collections"
+class="gold-button"
+>
+Explore Collections
+</a>
+
+
+<a
+href="https://wa.me/917020743737"
+target="_blank"
+class="outline-button"
+>
+Enquire on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     COLLECTIONS
+========================= -->
+
+<section id="collections" class="section collections">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+OUR COLLECTIONS
+</p>
+
+<h2>
+Jewellery For Every Occasion
+</h2>
+
+<p>
+Explore our range of jewellery styles
+for celebrations, weddings and everyday elegance.
+</p>
+
+</div>
+
+
+<div class="collection-grid">
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+💍
+</div>
+
+<h3>
+Rings
+</h3>
+
+<p>
+Elegant rings designed to add
+a beautiful touch to every occasion.
+</p>
+
+</div>
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+📿
+</div>
+
+<h3>
+Necklaces
+</h3>
+
+<p>
+Traditional and elegant necklace
+styles for special moments.
+</p>
+
+</div>
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+✨
+</div>
+
+<h3>
+Earrings
+</h3>
+
+<p>
+Beautiful earrings to complement
+your everyday and festive looks.
+</p>
+
+</div>
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+💎
+</div>
+
+<h3>
+Bridal Jewellery
+</h3>
+
+<p>
+Elegant jewellery selections
+for your most memorable day.
+</p>
+
+</div>
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+🌟
+</div>
+
+<h3>
+Gold Jewellery
+</h3>
+
+<p>
+Classic gold jewellery for
+timeless elegance.
+</p>
+
+</div>
+
+
+<div class="collection-card">
+
+<div class="collection-icon">
+🤍
+</div>
+
+<h3>
+Silver Jewellery
+</h3>
+
+<p>
+Stylish silver pieces for
+everyday and special occasions.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about-section">
+
+<div class="about">
+
+
+<div class="about-decoration">
+
+<div class="about-circle">
+
+<span>
+💎
+</span>
+
+</div>
+
+</div>
+
+
+<div class="about-content">
+
+<p class="section-label">
+ABOUT MAAHI JEWELLERS
+</p>
+
+<h2>
+Jewellery that becomes
+part of your story.
+</h2>
+
+<p>
+
+Maahi Jewellers by Maheshwari Latpate
+is a jewellery store located in Parli Vaijnath,
+offering jewellery for traditional celebrations,
+special occasions and everyday style.
+
+</p>
+
+<p>
+
+Our focus is on helping customers find
+beautiful jewellery that matches their
+personal style and special moments.
+
+</p>
+
+<p>
+
+Visit us at Sonar Line, Mondha Market,
+Parli Vaijnath to explore our collection.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+
+<div class="section-heading">
+
+<p class="section-label">
+WHY MAAHI JEWELLERS
+</p>
+
+<h2>
+Made for Your Special Moments
+</h2>
+
+</div>
+
+
+<div class="feature-grid">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💛
+</div>
+
+<h3>
+Elegant Designs
+</h3>
+
+<p>
+Discover jewellery styles that
+blend traditional beauty with elegance.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🤝
+</div>
+
+<h3>
+Personal Attention
+</h3>
+
+<p>
+Get assistance in choosing jewellery
+that suits your occasion and style.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✨
+</div>
+
+<h3>
+Special Occasions
+</h3>
+
+<p>
+Find jewellery for weddings,
+festivals and memorable celebrations.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ENQUIRY
+========================= -->
+
+<section id="enquiry" class="enquiry">
+
+
+<div class="enquiry-box">
+
+<h2>
+Jewellery Enquiry
+</h2>
+
+<p>
+Interested in a jewellery piece?
+Send us your details and we will contact you.
+</p>
+
+
+<form id="enquiryForm">
+
+
+<div class="form-row">
+
+
+<div class="input-group">
+
+<label>
+Your Name
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Enter your phone number"
+required
+>
+
+</div>
+
+
+</div>
+
+
+
+<div class="form-row">
+
+
+<div class="input-group">
+
+<label>
+Jewellery Category
+</label>
+
+<select id="category">
+
+<option value="General Enquiry">
+General Enquiry
+</option>
+
+<option value="Gold Jewellery">
+Gold Jewellery
+</option>
+
+<option value="Silver Jewellery">
+Silver Jewellery
+</option>
+
+<option value="Necklaces">
+Necklaces
+</option>
+
+<option value="Rings">
+Rings
+</option>
+
+<option value="Earrings">
+Earrings
+</option>
+
+<option value="Bridal Jewellery">
+Bridal Jewellery
+</option>
+
+</select>
+
+</div>
+
+
+<div class="input-group">
+
+<label>
+Preferred Visit Date
+</label>
+
+<input
+type="date"
+id="visitDate"
+>
+
+</div>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>
+Message
+</label>
+
+<textarea
+id="customerMessage"
+rows="4"
+placeholder="What jewellery are you looking for?"
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="submit-button"
+>
+
+Send Enquiry on WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+
+<p class="section-label">
+VISIT US
+</p>
+
+<h2>
+Maahi Jewellers
+</h2>
+
+<p class="contact-intro">
+
+We would love to welcome you to our store.
+Visit us and explore our jewellery collection.
+
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="icon">
+📍
+</div>
+
+<h3>
+Our Address
+</h3>
+
+<p>
+Maahi Jewellers,<br>
+Sonar Line,<br>
+Mondha Market,<br>
+Parli Vaijnath
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+📞
+</div>
+
+<h3>
+Call Us
+</h3>
+
+<a href="tel:7020743737">
+7020743737
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+💬
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<a
+href="https://wa.me/917020743737"
+target="_blank"
+>
+Chat With Us
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-name">
+Maahi Jewellers
+</div>
+
+<p>
+By Maheshwari Latpate
+</p>
+
+<p>
+Sonar Line, Mondha Market, Parli Vaijnath
+</p>
+
+<p>
+© 2026 Maahi Jewellers. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/917020743737"
+target="_blank"
+class="whatsapp"
+title="WhatsApp"
+>
+💬
+</a>
+
+
+
+<!-- =========================
+     FLOATING CALL
+========================= -->
+
+<a
+href="tel:7020743737"
+class="call"
+title="Call"
+>
+📞
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+document
+.getElementById("enquiryForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    let name =
+    document.getElementById("customerName").value;
+
+    let phone =
+    document.getElementById("customerPhone").value;
+
+    let category =
+    document.getElementById("category").value;
+
+    let date =
+    document.getElementById("visitDate").value;
+
+    let message =
+    document.getElementById("customerMessage").value;
+
+
+    let whatsappMessage =
+    "Hello Maahi Jewellers,%0A%0A" +
+
+    "I am interested in your jewellery.%0A%0A" +
+
+    "Name: " + name + "%0A" +
+
+    "Phone: " + phone + "%0A" +
+
+    "Category: " + category + "%0A" +
+
+    "Preferred Visit Date: " +
+    (date || "Not specified") + "%0A" +
+
+    "Message: " +
+    (message || "No message") + "%0A%0A" +
+
+    "Thank you.";
+
+
+    let whatsappURL =
+    "https://wa.me/917020743737?text=" +
+    whatsappMessage;
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>
